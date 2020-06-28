@@ -1,0 +1,26 @@
+<div class="details-section">
+    <div class="title">
+        <h4>Emplyee details</h4>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>City</td>
+                <td>Salary</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>{{employee.EmpId}}</td>
+                <td>{{employee.EmpName}}</td>
+                <td>{{employee.EmpCity}}</td>
+                <td>{{employee.EmpSalary}}</td>
+                <td><button (click)="editEmp(employee.EmpId)">edit</button><button
+                        (click)="deleteEmp(employee.EmpId)">delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
