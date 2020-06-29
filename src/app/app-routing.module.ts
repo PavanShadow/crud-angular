@@ -3,11 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { EmployeeEditComponent } from './components/employee-edit/employee-edit.component';
 import { EmployeeAddComponent } from './components/employee-add/employee-add.component';
+import { AuthComponent } from './components/auth/auth.component';
 
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: EmployeeComponent,
     children: [
       {
@@ -21,6 +22,10 @@ const routes: Routes = [
 
       },
     ]
+  },
+  {
+    path: '',
+    component: AuthComponent
   }
 ];
 

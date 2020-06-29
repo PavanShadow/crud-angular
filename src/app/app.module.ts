@@ -10,6 +10,8 @@ import { EmployeeService } from './services/employee.service';
 import { EmployeeDetailsComponent } from './components/employee-details/employee-details.component';
 import { EmployeeAddComponent } from './components/employee-add/employee-add.component';
 import { EmployeeEditComponent } from './components/employee-edit/employee-edit.component';
+import { AuthService } from './services/auth.service';
+import { AuthComponent } from './components/auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { EmployeeEditComponent } from './components/employee-edit/employee-edit.
     EmployeeComponent,
     EmployeeDetailsComponent,
     EmployeeAddComponent,
-    EmployeeEditComponent
+    EmployeeEditComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,7 @@ import { EmployeeEditComponent } from './components/employee-edit/employee-edit.
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [EmployeeService],
+  providers: [EmployeeService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
