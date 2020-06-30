@@ -15,7 +15,7 @@ export class AuthService {
 
   public async loginAdmin(admin: Admin): Promise<any> {
     return this.http.post<any>(this.baseUrl, admin).subscribe((data) => {
-      if (data.code === 'Success') {
+      if (data.status === 'Success') {
         this.router.navigate(['/home/add']);
       } else {
         alert('Login error');

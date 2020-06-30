@@ -26,7 +26,7 @@ export class EmployeeAddComponent implements OnInit {
   addEmployee(formValue: Employee): void {
     if (this.employeeForm.valid) {
       this.empservice.postEmployee(formValue).then((res) => {
-        if (res) {
+        if (res.status === 'Success') {
           alert('Success');
         }
       });

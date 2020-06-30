@@ -26,7 +26,8 @@ export class EmployeeDetailsComponent implements OnInit {
 
   deleteEmp(id: number): void {
     this.empservice.deleteEmployee(id).then((res) => {
-      if (res) {
+      if (res.status === 'Success') {
+        // console.log(res);
         location.reload();
       } else {
         console.log('delete error');

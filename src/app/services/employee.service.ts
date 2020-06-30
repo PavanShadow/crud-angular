@@ -23,15 +23,15 @@ export class EmployeeService {
   }
 
   public async postEmployee(employee: Employee): Promise<any> {
-    return this.http.post<any>(this.baseUrl, employee).subscribe();
+    return this.http.post<any>(this.baseUrl, employee).toPromise();
   }
 
   public async updateEmployee(id: number, employee: Employee): Promise<any> {
-    return this.http.put<any>(this.baseUrl + `/${id}`, employee).subscribe();
+    return this.http.put<any>(this.baseUrl + `/${id}`, employee).toPromise();
   }
 
   public async deleteEmployee(id: number): Promise<any> {
-    return this.http.delete<any>(this.baseUrl + `/${id}`).subscribe();
+    return this.http.delete<any>(this.baseUrl + `/${id}`).toPromise();
   }
 
 }
